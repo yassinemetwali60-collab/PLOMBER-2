@@ -1,0 +1,8 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { CTASection } from '@/components/LayoutParts'
+import { PHONE, PHONE_HREF } from '@/lib/site'
+
+export const metadata: Metadata = { title: 'Plombier Drancy | MANELOBAT', description: 'Plombier a Drancy pour fuite d eau, debouchage, chauffe-eau en panne et travaux sanitaires.' }
+
+export default function Page(){return <main><section className="page-hero"><div className="container"><p className="breadcrumbs">Accueil / Zones / Drancy</p><h1>Plombier Drancy : urgence, depannage et devis.</h1><p className="lead">Plombier a Drancy pour fuite d eau, debouchage, chauffe-eau en panne et travaux sanitaires.</p><div className="cta-row"><a className="btn btn-primary" href={PHONE_HREF}>Appeler {PHONE}</a><Link className="btn btn-danger" href="/urgence-plomberie">J ai une urgence</Link><Link className="btn btn-soft" href="/devis-contact">Demander un devis</Link></div></div></section><section><div className="container grid-2"><div><h2>Intervention plomberie a Drancy</h2><p className="lead">A Drancy, MANELOBAT peut qualifier les demandes de particuliers et petits locaux avec photos et code postal.</p><ul className="list"><li>Urgence fuite d eau et degat des eaux</li><li>Debouchage WC, evier, douche et canalisation</li><li>Chauffe-eau en panne ou a remplacer</li><li>Installation sanitaire et robinetterie</li><li>Renovation salle de bain</li></ul></div><div className="mapbox"><div><h3>Drancy</h3><p>Zone locale MANELOBAT. Renseignez votre adresse ou code postal pour prioriser le rappel.</p><Link className="btn btn-primary" href="/devis-contact">Envoyer une demande</Link></div></div></div></section><CTASection /></main>}

@@ -1,0 +1,8 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { CTASection } from '@/components/LayoutParts'
+import { PHONE, PHONE_HREF } from '@/lib/site'
+
+export const metadata: Metadata = { title: 'Plombier La Courneuve | MANELOBAT', description: 'Intervention plomberie a La Courneuve : fuite, debouchage, chauffe-eau, robinetterie et sanitaire.' }
+
+export default function Page(){return <main><section className="page-hero"><div className="container"><p className="breadcrumbs">Accueil / Zones / La Courneuve</p><h1>Plombier La Courneuve : urgence, depannage et devis.</h1><p className="lead">Intervention plomberie a La Courneuve : fuite, debouchage, chauffe-eau, robinetterie et sanitaire.</p><div className="cta-row"><a className="btn btn-primary" href={PHONE_HREF}>Appeler {PHONE}</a><Link className="btn btn-danger" href="/urgence-plomberie">J ai une urgence</Link><Link className="btn btn-soft" href="/devis-contact">Demander un devis</Link></div></div></section><section><div className="container grid-2"><div><h2>Intervention plomberie a La Courneuve</h2><p className="lead">La Courneuve fait partie des zones voisines prioritaires de MANELOBAT pour les demandes rapides autour d Aubervilliers.</p><ul className="list"><li>Urgence fuite d eau et degat des eaux</li><li>Debouchage WC, evier, douche et canalisation</li><li>Chauffe-eau en panne ou a remplacer</li><li>Installation sanitaire et robinetterie</li><li>Renovation salle de bain</li></ul></div><div className="mapbox"><div><h3>La Courneuve</h3><p>Zone locale MANELOBAT. Renseignez votre adresse ou code postal pour prioriser le rappel.</p><Link className="btn btn-primary" href="/devis-contact">Envoyer une demande</Link></div></div></div></section><CTASection /></main>}
